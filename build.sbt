@@ -29,8 +29,8 @@ lazy val sbtStryker4s = (project withId "sbt-stryker4s" in file("sbt"))
   .settings(Settings.commonSettings, Settings.sbtPluginSettings)
   .dependsOn(stryker4sCore.jvm(Dependencies.versions.scala212))
 
-lazy val childProcess = newProject("stryker4s-childprocess", "childprocess")
-  .settings(Settings.childProcessSettings)
+lazy val sbtTestRunner = newProject("sbt-stryker4s-testrunner", "testrunner")
+  .settings(Settings.sbtTestrunnerSettings)
   .jvmPlatform(scalaVersions = Dependencies.versions.crossScalaVersions)
 
 def newProject(projectName: String, dir: String) =

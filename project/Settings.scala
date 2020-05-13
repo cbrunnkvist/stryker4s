@@ -41,7 +41,7 @@ object Settings {
     scriptedBufferLog := false
   )
 
-  lazy val childProcessSettings: Seq[Setting[_]] = Seq(
+  lazy val sbtTestrunnerSettings: Seq[Setting[_]] = Seq(
     Test / parallelExecution := true,
     libraryDependencies ++= Seq(
       Dependencies.testInterface
